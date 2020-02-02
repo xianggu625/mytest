@@ -26,16 +26,16 @@ pipeline {
 		    exclusionPattern: 'src/test*',
 		    skipCopyOfSrcFiles: false,
 		    changeBuildStatus: true,
-		    minimumInstructionCoverage: '0', maximumInstructionCoverage: '100',
-		    minimumLineCoverage: '0', maximumLineCoverage: '100',
-		    minimumComplexityCoverage: '0', maximumComplexityCoverage: '100',
-		    minimumMethodCoverage: '0', maximumMethodCoverage: '100',
-		    minimumClassCoverage: '0', maximumClassCoverage: '100',
-		    minimumBranchCoverage: '0', maximumBranchCoverage: '100',
+		    minimumInstructionCoverage: '30', maximumInstructionCoverage: '70',
+		    minimumLineCoverage: '30', maximumLineCoverage: '70',
+		    minimumComplexityCoverage: '30', maximumComplexityCoverage: '70',
+		    minimumMethodCoverage: '30', maximumMethodCoverage: '70',
+		    minimumClassCoverage: '30', maximumClassCoverage: '70',
+		    minimumBranchCoverage: '30', maximumBranchCoverage: '70',
 		    buildOverBuild: true,
-		    deltaInstructionCoverage: '100',  deltaLineCoverage: '100',
-		    deltaMethodCoverage: '100',  deltaClassCoverage: '100',
-		    deltaComplexityCoverage: '100',  deltaBranchCoverage: '100'
+		    deltaInstructionCoverage: '80',  deltaLineCoverage: '80',
+		    deltaMethodCoverage: '80',  deltaClassCoverage: '80',
+		    deltaComplexityCoverage: '80',  deltaBranchCoverage: '80'
 		)
 	    }
 	 }
