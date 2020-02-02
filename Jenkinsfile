@@ -18,6 +18,7 @@ pipeline {
          }
 	 stage('jacoco'){
             steps{
+	    	bat "mvn clean install"
 	    	jacoco(
 		    execPattern: 'target/**/*.exec',
 		    classPattern: 'target/classes',
