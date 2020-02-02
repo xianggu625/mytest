@@ -11,7 +11,7 @@ pipeline {
                 bat "mvn pmd:pmd"
             }
          }
-	 stage('pmd'){
+	 stage('junit'){
             steps {
 		bat "mvn test"
             }
