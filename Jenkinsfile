@@ -14,11 +14,6 @@ pipeline {
     }
     post{
         always{
-            pmd(canRunOnFailed:true,pattern:'**/target/pmd.xml')
-        }
-    }
-    post{
-        always{
 	    junit testResults:"**/target/surefile-report/*.xml"
         }
     }
