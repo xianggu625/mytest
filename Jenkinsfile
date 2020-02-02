@@ -19,7 +19,7 @@ pipeline {
 	 stage('jacoco'){
             steps{
 	    	bat "mvn clean install"
-		jacoco{
+		jacoco(
 		    execPattern: 'target/**/*.exec',
 		    classPattern: 'target/classes',
 		    sourcePattern: 'src/main.java',
@@ -36,7 +36,7 @@ pipeline {
 		    deltaInstructionCoverage: '80',  deltaLineCoverage: '80',
 		    deltaMethodCoverage: '80',  deltaClassCoverage: '80',
 		    deltaComplexityCoverage: '80',  deltaBranchCoverage: '80'
-		}
+		)
 	    }
 	 }
     }
