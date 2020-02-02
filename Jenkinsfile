@@ -24,7 +24,7 @@ pipeline {
 		    classPattern: 'target/classes',
 		    sourcePattern: 'src/main.java',
 		    exclusionPattern: 'src/test*',
-		    skipcopyofSrcFiles: false,
+		    skipcopyOfSrcFiles: false,
 		    changeBuildStatus: true,
 		    minimumInstructionCoverage: '30', maximumInstructionCoverage: '70',
 		    minimumLineCoverage: '30', maximumLineCoverage: '70',
