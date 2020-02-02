@@ -18,8 +18,7 @@ pipeline {
          }
 	 stage('jacoco'){
             steps{
-	    	bat "mvn clean install"
-		jacoco(
+	    	jacoco(
 		    execPattern: 'target/**/*.exec',
 		    classPattern: 'target/classes',
 		    sourcePattern: 'src/main.java',
@@ -42,8 +41,8 @@ pipeline {
     }
     post{
         always{
-	    //junit testResults: "**/target/surefire-reports/*.xml"
-	    //pmd(canRunOnFailed:true,pattern:'**/target/pmd.xml')
+	    junit testResults: "**/target/surefire-reports/*.xml"
+	    pmd(canRunOnFailed:true,pattern:'**/target/pmd.xml')
         }
     }
 }
