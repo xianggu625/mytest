@@ -11,11 +11,11 @@ pipeline {
                 bat "mvn pmd:pmd"
             }
          }
-	 stage('junit'){
+	 /*stage('junit'){
             steps {
 		bat "mvn test"
             }
-         }
+         }*/
 	 stage('jacoco'){
             steps{
 	    	bat "mvn clean install"
