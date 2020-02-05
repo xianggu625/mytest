@@ -11,7 +11,7 @@ pipeline {
                 bat "mvn pmd:pmd"
             }
          }
-	 /*stage('junit'){
+	 stage('junit'){
             steps {
 		bat "mvn test"
             }
@@ -21,7 +21,7 @@ pipeline {
 	    	bat "mvn clean install"
 	    	jacoco()
 	    }
-	 }*/
+	 }
 	 stage('Code Analysis'){
 	 	steps{
 		withSonarQubeEnv('sonarqube')
@@ -36,10 +36,10 @@ pipeline {
 		}
 	 }
     }
-    /*post{
+    post{
         always{
 	    junit testResults: "**/target/surefire-reports/*.xml"
 	    pmd(canRunOnFailed:true,pattern:'**/target/pmd.xml')
         }
-    }*/
+    }
 }
