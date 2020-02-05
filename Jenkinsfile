@@ -24,7 +24,7 @@ pipeline {
 	 stage('Code Analysis'){
 	 	steps{
 		withSonarQubeEnv('sonarqube'){
-				bat  'mvn clean verify sonar:sonar -Dsonar.login=efcf673aa8a90ae1e6d43b8092e8e349995474f6 -Dsonar.host.url=http://127.0.0.1:9000'
+				bat  'mvn clean verify sonar:sonar'
 			}
 		}
 	 }
