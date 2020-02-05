@@ -19,14 +19,7 @@ pipeline {
 	 stage('jacoco'){
             steps{
 	    	bat "mvn clean install"
-	    	jacoco(
-		execPattern: 'target/**/*.exec ', 
-		classPattern: 'target/classes',
-		sourcePattern: 'src/main.java', 
-		exclusionPattern: 'src/test*', 
-		skipCopyOfSrcFiles: false,
-		changeBuildStatus: true 
-		)
+	    	jacoco()
 	    }
 	 }*/
 	 stage('Code Analysis'){
