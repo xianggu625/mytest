@@ -12,6 +12,8 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>11</maven.compiler.source>
+    <maven.compiler.target>11</maven.compiler.target>
   </properties>
 
   <reporting>
@@ -70,6 +72,11 @@
 			</syatemPropertyVariable>
 		</configuration>
       </plugin>
+	  <plugin>
+		<groupId>org.sonarsource.scanner.maven</groupId>
+         <artifactId>sonar-maven-plugin</artifactId>
+         <version>3.5.0.1254</version>
+		</plugin>
 	  </plugins>
   </build>
 

@@ -29,6 +29,16 @@ pipeline {
 		)
 	    }
 	 }
+	 stage('sonarqube'){
+	      bat  mvn clean verify sonar:sonar ¨CDsonar.login=${SONAR_AUTH_TOKEN} -Dmaven.test.skip=true
+	 }
+	 stage('Quality Gate'){
+	 	steps{
+		    timeout(time:1,unit:'HOURS'){
+		         waitForQualityGate abortPipeline:true
+		    }
+		}
+	 }
     }
     post{
         always{
