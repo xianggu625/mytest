@@ -15,7 +15,7 @@ pipeline {
             steps {
 		bat "mvn test"
             }
-         }*/
+         }
 	 stage('jacoco'){
             steps{
 	    	bat "mvn clean install"
@@ -28,7 +28,7 @@ pipeline {
 		changeBuildStatus: true 
 		)
 	    }
-	 }
+	 }*/
 	 stage('Code Analysis'){
 	 	steps{
 		withSonarQubeEnv('sonarqube')
