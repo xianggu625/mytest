@@ -18,7 +18,6 @@ pipeline {
          }
 	 stage('jacoco'){
             steps{
-	    	bat "mvn clean install"
 	    	jacoco()
 	    }
 	 }
