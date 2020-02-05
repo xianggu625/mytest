@@ -13,8 +13,9 @@ pipeline {
          }
 	 stage('Code Analysis'){
 	 	steps{
-		withSonarQubeEnv('sonarqube')
-			bat  'mvn clean verify sonar:sonar ¨CDsonar.login=b8e07932b560209deaae8fe4e5035e5b06301a54 -Dmaven.test.skip=true'
+		withSonarQubeEnv('sonarqube'){
+				bat  'mvn clean verify sonar:sonar ¨CDsonar.login=b8e07932b560209deaae8fe4e5035e5b06301a54 -Dmaven.test.skip=true'
+			}
 		}
 	 }
 	 stage('Quality Gate'){
