@@ -24,8 +24,9 @@ pipeline {
 	 }
 	 stage('Code Analysis'){
 	 	steps{
-		withSonarQubeEnv('sonarqube')
-			bat  'mvn clean verify sonar:sonar ¨CDsonar.login=${SONAR_AUTH_TOKEN} -Dmaven.test.skip=true'
+		withSonarQubeEnv('sonarqube'){
+				bat  'mvn clean verify sonar:sonar ¨CDsonar.login=${SONAR_AUTH_TOKEN} -Dmaven.test.skip=true'
+			}
 		}
 	 }
 	 stage('Quality Gate'){
