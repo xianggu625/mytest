@@ -24,11 +24,13 @@ pipeline {
 	 stage('Code Analysis'){
 	 	steps{
 		withSonarQubeEnv('sonarqube'){
-				bat  '''mvn clean verify sonar:sonar 
-				-Dsonar.login=0df7399ff1fd3afa7c0adfcb654fa77d8a67b836 
-				-Dsonar.login=admin 
-				-Dsonar.password=admin 
-				-Dsonar.host.url=http://127.0.0.1:9000'''
+				bat  '''
+				mvn clean verify sonar:sonar \
+				-Dsonar.login=0df7399ff1fd3afa7c0adfcb654fa77d8a67b836 \
+				-Dsonar.login=admin \
+				-Dsonar.password=admin \
+				-Dsonar.host.url=http://127.0.0.1:9000
+				'''
 			}
 		}
 	 }
