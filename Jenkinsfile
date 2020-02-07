@@ -35,7 +35,6 @@ pipeline {
 		}
 	 }
     }
-    stages{
 	stage('Quality Gate'){
 	 	steps{
 			script {
@@ -50,7 +49,6 @@ pipeline {
 		     }
 	      }
 	 }
-    }
     post{
         always{
 	    junit testResults: "**/target/surefire-reports/*.xml"
