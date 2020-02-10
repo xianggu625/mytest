@@ -26,7 +26,7 @@ pipeline {
 		withSonarQubeEnv('sonarqube'){
 				bat  '''
 				mvn clean verify sonar:sonar \
-				-Dsonar.login=0df7399ff1fd3afa7c0adfcb654fa77d8a67b836 \
+				-Dsonar.login=6cdf6f3176211d67dbf469712168c005c48f8c4d \
 				-Dsonar.login=admin \
 				-Dsonar.password=admin \
 				-Dsonar.host.url=http://127.0.0.1:9000
