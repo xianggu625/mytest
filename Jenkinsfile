@@ -51,7 +51,6 @@ pipeline {
     }
     post{
         always{
-	    junit testResults: "**/target/surefire-reports/*.xml"
 	    pmd(canRunOnFailed:true,pattern:'**/target/pmd.xml')
 	    script{
 	       allure([
@@ -59,7 +58,7 @@ pipeline {
 	         jdk:'',
 	         properties: [],
 	         reportBuildPolicy:"ALWAYS",
-		 results: [[path: 'allure-results']]
+		 results: [[path: 'target/allure-results']]
 	      ])
 	   }
         }
