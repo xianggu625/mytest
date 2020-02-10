@@ -69,7 +69,6 @@
          <artifactId>sonar-maven-plugin</artifactId>
          <version>3.5.0.1254</version>
 		</plugin>
-		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
@@ -98,7 +97,6 @@
 					</properties>
 										
 					<includes>
-					
 						<include>**/Console/**/*.java</include>
 						<!-- <include>**/Console/Customer/*.java</include>
 						<include>**/Console/ExchangeRate/*.java</include>
