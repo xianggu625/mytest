@@ -87,7 +87,7 @@
 				    <skipTests>false</skipTests>
 					<testFailureIgnore>false</testFailureIgnore>
 					<argLine>
-						-javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
+						-javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/1.8.9/aspectjweaver-1.8.9.jar"
 					</argLine>
 					<properties>
 						<property>
@@ -95,32 +95,30 @@
 							<value>io.qameta.allure.junit4.AllureJunit4</value>
 						</property>
 					</properties>
-										
-					<includes>
-						<include>**/Console/**/*.java</include>
-						<!-- <include>**/Console/Customer/*.java</include>
-						<include>**/Console/ExchangeRate/*.java</include>
-						<include>**/Console/Product/*.java</include>
-						<include>**/Console/User/*.java</include>
-						<include>**/Console/DepartmentAndCategories/*.java</include>-->
-						<include>**/URMTest/**/*.java</include> 
-					</includes>
-					<!--<excludes> <exclude>src/test/java/Console/**/*.java</exclude> <exclude>src/test/java/URMTest/**/*.java</exclude> 
-						</excludes> -->
+				<systemproperties>
+				    <property>
+					     <name>allure.results.directory</name>
+                         <value>./target/allure-results</value>
+					</property>
+					<property>
+					     <name>allure.link.issue.pattern</name>
+						 <value>http://example.org/issue/{}</value>
+					</property>
+				</systemproperties>
 				</configuration>
 				<dependencies>
-					<dependency>
-						<groupId>org.apache.maven.surefire</groupId>
-						<artifactId>surefire-junit47</artifactId>
-						<version>2.20</version>
-					</dependency>
-					<dependency>
-						<groupId>org.aspectj</groupId>
-						<artifactId>aspectjweaver</artifactId>
-						<version>1.9.4</version>
-					</dependency>
+				<dependency>
+					<groupId>org.aspectj</groupId>
+                     <artifactId>aspectjweaver</artifactId>
+                     <version>1.8.9</version>
+				</dependency>
 				</dependencies>
 			</plugin>
+			<plugin>
+               <groupId>io.qameta.allure</groupId>
+		       <artifactId>allure-maven</artifactId>
+		       <version>2.8</version>
+            </plugin>
 	  </plugins>
   </build>
 
