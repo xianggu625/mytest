@@ -95,16 +95,6 @@
 							<value>io.qameta.allure.junit4.AllureJunit4</value>
 						</property>
 					</properties>
-				<systemproperties>
-				    <property>
-					     <name>allure.results.directory</name>
-                         <value>./target/allure-results</value>
-					</property>
-					<property>
-					     <name>allure.link.issue.pattern</name>
-						 <value>http://example.org/issue/{}</value>
-					</property>
-				</systemproperties>
 				</configuration>
 				<dependencies>
 				<dependency>
